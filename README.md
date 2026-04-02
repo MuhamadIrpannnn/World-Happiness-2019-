@@ -70,23 +70,23 @@ Proyek ini merupakan tugas mata kuliah **Business Intelligence** yang bertujuan 
     <th>Fungsi dalam Proyek</th>
   </tr>
   <tr>
-    <td align="center"><b>🐍 Google Colab</b></td>
+    <td align="center"><b> Google Colab</b></td>
     <td>Proses ETL: pembersihan data, transformasi kolom, dan pembuatan tabel dimensi & fakta menggunakan Python/pandas</td>
   </tr>
   <tr>
-    <td align="center"><b>🐘 PostgreSQL</b></td>
+    <td align="center"><b> PostgreSQL</b></td>
     <td>Data Warehouse dengan desain Star Schema — penyimpanan terstruktur dan query analitik SQL</td>
   </tr>
   <tr>
-    <td align="center"><b>🖥️ pgAdmin 4</b></td>
+    <td align="center"><b> pgAdmin 4</b></td>
     <td>GUI untuk manajemen database PostgreSQL, import data CSV, dan eksekusi query</td>
   </tr>
   <tr>
-    <td align="center"><b>📊 Power BI Desktop</b></td>
+    <td align="center"><b> Power BI Desktop</b></td>
     <td>Visualisasi data interaktif, pembuatan dashboard, dan penyajian insight bisnis</td>
   </tr>
   <tr>
-    <td align="center"><b>🐙 GitHub</b></td>
+    <td align="center"><b>GitHub</b></td>
     <td>Version control, dokumentasi proyek, dan kolaborasi antar anggota tim</td>
   </tr>
 </table>
@@ -96,34 +96,34 @@ Proyek ini merupakan tugas mata kuliah **Business Intelligence** yang bertujuan 
 ## 📁 Struktur Repository
 
 ```
-📦 world-happiness-2019/
+world-happiness-2019/
 │
 ├── 📂 data/
 │   ├── 📂 raw/
-│   │   └── 📄 2019.csv                      ← Dataset asli dari Kaggle
+│   │   └──  2019.csv                      ← Dataset asli dari Kaggle
 │   └── 📂 processed/
-│       ├── 📄 dim_country.csv               ← Dimensi negara (hasil ETL)
-│       ├── 📄 dim_years.csv                 ← Dimensi tahun (hasil ETL)
-│       └── 📄 fact_happiness.csv            ← Tabel fakta utama (hasil ETL)
+│       ├──  dim_country.csv               ← Dimensi negara (hasil ETL)
+│       ├──  dim_years.csv                 ← Dimensi tahun (hasil ETL)
+│       └──  fact_happiness.csv            ← Tabel fakta utama (hasil ETL)
 │
 ├── 📂 notebooks/
-│   └── 📓 ETL_World_Happiness_2019.ipynb   ← Google Colab notebook
+│   └──  ETL_World_Happiness_2019.ipynb   ← Google Colab notebook
 │
 ├── 📂 sql/
-│   ├── 📄 01_create_tables.sql              ← DDL: Buat tabel Star Schema
-│   ├── 📄 02_import_data.sql                ← Import CSV ke PostgreSQL
-│   └── 📄 03_analysis_queries.sql           ← Query analisis & laporan
+│   ├──  01_create_tables.sql              ← DDL: Buat tabel Star Schema
+│   ├──  02_import_data.sql                ← Import CSV ke PostgreSQL
+│   └──  03_analysis_queries.sql           ← Query analisis & laporan
 │
 ├── 📂 powerbi/
-│   ├── 📊 dashboard.pbix                    ← File Power BI
-│   └── 🖼️  dashboard_screenshot.png         ← Preview dashboard
+│   ├── dashboard.pbix                    ← File Power BI
+│   └── dashboard_screenshot.png         ← Preview dashboard
 │
-└── 📄 README.md                             ← Dokumentasi proyek ini
+└──  README.md                             ← Dokumentasi proyek ini
 ```
 
 ---
 
-## 🗄️ Desain Star Schema
+##  Desain Star Schema
 
 Arsitektur Data Warehouse menggunakan **Star Schema** dengan **1 tabel fakta** dan **2 tabel dimensi**:
 
@@ -228,73 +228,73 @@ CREATE DATABASE happiness_dw;
 
 ---
 
-## 📊 Key Findings & Statistik
+## Key Findings & Statistik
 
 <div align="center">
 
 | Metrik | Hasil |
 |:---|:---|
-| 🏆 **Negara Paling Bahagia** | Finland — Score: **7.769** |
-| 😔 **Negara Paling Tidak Bahagia** | Afghanistan — Score: **2.567** |
-| 🌏 **Rata-rata Skor Global** | **5.407** dari skala 10 |
-| 📈 **Korelasi Terkuat** | GDP per Capita vs Score: **r = +0.794** |
-| 🤝 **Faktor Paling Berpengaruh** | GDP per Capita & Social Support |
-| 🇮🇩 **Posisi Indonesia** | Rank **92** dari 156 negara |
-| 🌏 **Posisi Malaysia** | Rank **80** dari 156 negara |
-| 🇸🇬 **Posisi Singapore** | Rank **34** dari 156 negara |
+| **Negara Paling Bahagia** | Finland — Score: **7.769** |
+| **Negara Paling Tidak Bahagia** | Afghanistan — Score: **2.567** |
+| **Rata-rata Skor Global** | **5.407** dari skala 10 |
+| **Korelasi Terkuat** | GDP per Capita vs Score: **r = +0.794** |
+| **Faktor Paling Berpengaruh** | GDP per Capita & Social Support |
+| **Posisi Indonesia** | Rank **92** dari 156 negara |
+| **Posisi Malaysia** | Rank **80** dari 156 negara |
+| **Posisi Singapore** | Rank **34** dari 156 negara |
 
 </div>
 
 ---
 
-## 📸 Analisis Chart & Insight
+## Analisis Chart & Insight
 
-### 📊 Chart 1 — Happiness Score & Ranking Global
+### Chart 1 — Happiness Score & Ranking Global
 
 <img width="1236" height="696" alt="Chart 1 - Happiness Score Ranking" src="https://github.com/user-attachments/assets/d290d2d5-f5cc-47b5-8c60-4d1f917e4357" />
 
-**💡 Insight:**
+**Insight:**
 > Finland menempati posisi pertama dengan skor **7.769**, diikuti Denmark **(7.600)** dan Norway **(7.554)**. Kelima besar didominasi oleh negara-negara **Nordic** yang dikenal memiliki sistem kesejahteraan sosial kuat, transparansi pemerintahan tinggi, dan GDP per kapita yang besar. Afghanistan berada di posisi paling bawah **(2.567)** akibat konflik berkepanjangan yang merusak seluruh aspek kehidupan masyarakat.
 
 ---
 
-### 📊 Chart 2 — Kontribusi GDP per Capita terhadap Kebahagiaan
+### Chart 2 — Kontribusi GDP per Capita terhadap Kebahagiaan
 
 <img width="1239" height="696" alt="Chart 2 - GDP per Capita" src="https://github.com/user-attachments/assets/fd482c48-899d-4df4-839d-49745deb87b7" />
 
-**💡 Insight:**
+**Insight:**
 > GDP per Capita memiliki korelasi **paling kuat** terhadap Happiness Score dengan nilai **r = +0.794**. Hal ini menunjukkan bahwa kesejahteraan ekonomi adalah fondasi utama kebahagiaan — negara dengan pendapatan per kapita tinggi mampu menyediakan akses pendidikan, kesehatan, dan infrastruktur yang lebih baik bagi warganya. Namun perlu dicatat, GDP bukan satu-satunya penentu — Qatar memiliki GDP sangat tinggi tetapi tidak masuk Top 20 karena nilai freedom dan social support yang rendah.
 
 ---
 
-### 📊 Chart 3 — Peran Social Support & Life Expectancy
+###  Chart 3 — Peran Social Support & Life Expectancy
 
 <img width="1238" height="696" alt="Chart 3 - Social Support" src="https://github.com/user-attachments/assets/a43bc428-3ec2-4771-aa98-2fbff188c1c4" />
 
-**💡 Insight:**
+** Insight:**
 > **Social Support** — diukur dari pertanyaan *"apakah kamu memiliki seseorang yang bisa diandalkan saat dalam kesulitan?"* — terbukti menjadi prediktor kebahagiaan yang lebih kuat dibandingkan Freedom. Negara dengan jaringan sosial erat dan sistem kesehatan berkualitas (Life Expectancy tinggi) secara konsisten memiliki skor yang lebih tinggi. Ini membuktikan bahwa koneksi antar manusia sama pentingnya dengan kondisi ekonomi dalam menentukan kebahagiaan.
 
 ---
 
-### 📊 Chart 4 — Dampak Freedom & Persepsi Korupsi
+###  Chart 4 — Dampak Freedom & Persepsi Korupsi
 
 <img width="1237" height="696" alt="Chart 4 - Freedom and Corruption" src="https://github.com/user-attachments/assets/50b73575-04c4-49e7-a3f3-891115ca94a9" />
 
-**💡 Insight:**
+** Insight:**
 > Negara dengan tingkat **korupsi persepsi rendah** (kepercayaan tinggi kepada pemerintah) cenderung memiliki happiness score yang lebih tinggi. Denmark dan Finland secara konsisten menjadi negara paling bersih dari korupsi sekaligus paling bahagia. Sebaliknya, negara seperti Venezuela dan Lebanon yang memiliki persepsi korupsi sangat tinggi justru berada di bawah rata-rata global. **Freedom to make life choices** juga berkorelasi positif — kebebasan individu memberikan rasa kontrol atas hidup yang meningkatkan kebahagiaan.
 
 ---
 
-### 📊 Chart 5 — Perbandingan Regional & Posisi Asia Tenggara
+###  Chart 5 — Perbandingan Regional & Posisi Asia Tenggara
 
 <img width="1236" height="691" alt="Chart 5 - Regional Comparison" src="https://github.com/user-attachments/assets/dfdc3808-99a4-4a32-88d7-faa90f630c5d" />
 
-**💡 Insight:**
+** Insight:**
 > Di tingkat regional, **Western Europe** mendominasi dengan rata-rata skor tertinggi, sementara **Sub-Saharan Africa** mencatat skor terendah karena tantangan kemiskinan dan ketidakstabilan politik. Dalam konteks **Asia Tenggara**, terdapat gap yang signifikan: Singapore berada di rank **34** berkat GDP tinggi dan tata kelola pemerintahan yang baik, sementara Indonesia di rank **92** dan Philippines di rank **69**. Gap ini mencerminkan perbedaan kualitas institusi, akses layanan publik, dan tingkat pendapatan antar negara kawasan.
 
 ---
 
-## 📸 Preview Dashboard Power BI
+##  Preview Dashboard Power BI
 
 <img width="1190" height="668" alt="Power BI Dashboard - World Happiness Report 2019" src="https://github.com/user-attachments/assets/6cbd4abe-ee54-4aad-ab44-d902e8dce9b7" />
 
@@ -302,14 +302,14 @@ CREATE DATABASE happiness_dw;
 
 ---
 
-## 📚 Sumber Data
+##  Sumber Data
 
 | Item | Detail |
 |---|---|
-| 📦 **Dataset** | [World Happiness Report 2019 — Kaggle](https://www.kaggle.com/datasets/obaidhere/world-happiness-report?select=2019.csv) |
-| 📓 **Notebook ETL** | [Google Colab — ETL World Happiness 2019](https://colab.research.google.com/drive/1RSRBwUz-hY84-fIizhZfe2DAifAulMjk) |
-| 📅 **Tahun Data** | 2019 |
-| 🌍 **Jumlah Negara** | 156 negara |
+|  **Dataset** | [World Happiness Report 2019 — Kaggle](https://www.kaggle.com/datasets/obaidhere/world-happiness-report?select=2019.csv) |
+|  **Notebook ETL** | [Google Colab — ETL World Happiness 2019](https://colab.research.google.com/drive/1RSRBwUz-hY84-fIizhZfe2DAifAulMjk) |
+|  **Tahun Data** | 2019 |
+|  **Jumlah Negara** | 156 negara |
 
 ---
 
